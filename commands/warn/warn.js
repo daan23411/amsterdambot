@@ -6,6 +6,9 @@ module.exports = {
   usage: "<User mention> <Reason>",
   run: async (bot, message, args) => {
     let user = message.mentions.users.first();
+    if (!message.member.permissions.has("KICK_MEMBERS")) {
+      return message.channel.send('Je hebt geen permissie om dit uit te voeren')
+    }
     if (!user) return message.channel.send(`Geen gebruiker genoemd!`);
     if (!args.slice(1).join(" "))
       return message.channel.send(`Geen reden opgegeven!`);
