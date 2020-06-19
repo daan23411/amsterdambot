@@ -7,9 +7,8 @@ module.exports={
     timeout: 5000,
     run: async(bot,message,args)=>{
         const embed = new MessageEmbed()
-        .setTitle('Serverinfo (klik voor invite)')
+        .setTitle('Serverinfo')
         .setColor('RANDOM')
-        .setURL('https://discord.gg/CTn5aRf')
         .setThumbnail(message.guild.iconURL())
         .setDescription(`Geeft serverinformatie over ${message.guild.name}`)
         .addFields(
