@@ -2,7 +2,7 @@ const warns = require("../../models/warns");
 module.exports = {
   name: "warn",
   description: "Warn een gebruiker",
-  category: "moderatie",
+  category: "warn",
   usage: "<User mention> <Reason>",
   run: async (bot, message, args) => {
     let user = message.mentions.users.first();

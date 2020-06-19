@@ -27,10 +27,10 @@ function getAll(bot,message){
 }
 function getCMD(bot,message,input){
     const embed = new MessageEmbed()
-    const cmd = bot.commands.get(input.toLowerCase) || bot.commands.get(bot.aliases.get(input.toLowerCase()));
+    const cmd = bot.commands.get(input.toLowerCase()) || bot.commands.get(bot.aliases.get(input.toLowerCase()));
     let info = `Geen informatie gevonden voor het command **${input.toLowerCase()}**`
     if(!cmd) return message.channel.send(embed.setColor('RANDOM').setDescription(info).setFooter('© daan2341, 2020 - 2021'));
-    if(cmd.name) info = `**Command Naam**: ${cmd.name}`
+    if(cmd.name) info = `**Naam**: ${cmd.name}`
     if(cmd.aliases) info += `\n**Afkortingen**: ${cmd.aliases.map(a=>`\`${a}\``).join(", ")}`
     if(cmd.description) info += `\n**Beschrijving**: ${cmd.description}`
     if(cmd.usage) info += `\n**Gebruik**: ${cmd.usage}`; 
