@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js')
 module.exports = {
     name: 'mute',
     description: 'Mute iemand die de regels breekt',
-    category: 'mute',
+    category: 'moderatie',
     usage: 'mute <@mention> <reason>',
     run: async (bot, message, args) => {
         if (!message.member.hasPermission("MANAGE_ROLES")) {

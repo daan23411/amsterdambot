@@ -1,6 +1,6 @@
 module.exports = {
     name: 'unmute',
-    category: 'mute',
+    category: 'moderatie',
     run: async (bot, message, args) => {
         if (!message.member.hasPermission("MANAGE_ROLES")) {
             return message.channel.send('Je hebt geen permissie om dit te doen!');

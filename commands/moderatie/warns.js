@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
     name: "warns",
     description: "Krijg het aantal warns van een speler",
-    category: "warn",
+    category: "moderatie",
     usage: "<User mention>",
     run: async (bot, message, args) => {
         let user = message.mentions.members.first();
