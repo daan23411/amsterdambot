@@ -9,13 +9,7 @@ module.exports = {
       let MSG = message.content.split(`${bot.prefix}say `).join("");
       if (!MSG)
         return message.channel.send(`Geen bericht opgegeven!`);
-        const Embed = new MessageEmbed()
-        .setTitle('Nieuwe Update')
-        .setDescription(MSG)
-        .setColor('RANDOM')
-        .setTimestamp()
-        .setFooter(`© daan2341, 2020 - 2021`)
-        message.channel.send(Embed);
-      message.delete();
+    message.channel.send(MSG);
+    message.delete();
     },
   };
